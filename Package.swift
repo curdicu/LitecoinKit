@@ -14,17 +14,17 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/curdicu/BitcoinCore.git", .branch("main")),
+        .package(url: "https://github.com/horizontalsystems/BitcoinCore.Swift.git", .upToNextMajor(from: "3.0.0")),
         .package(url: "https://github.com/greymass/swift-scrypt.git", from: "1.0.0"),
-        .package(url: "https://github.com/curdicu/HsToolKit.git", .branch("main")),
+        .package(url: "https://github.com/horizontalsystems/HsToolKit.Swift.git", .upToNextMajor(from: "2.0.5")),
     ],
     targets: [
         .target(
             name: "LitecoinKit",
             dependencies: [
                 .product(name: "Scrypt", package: "swift-scrypt"),
-                .product(name: "BitcoinCore", package: "BitcoinCore"),
-                .product(name: "HsToolKit", package: "HsToolKit"),
+                .product(name: "BitcoinCore", package: "BitcoinCore.Swift"),
+                .product(name: "HsToolKit", package: "HsToolKit.Swift"),
             ]
         ),
     ]
